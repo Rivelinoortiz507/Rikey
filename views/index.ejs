@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Nuestros Recuerdos</title>
+</head>
+
+<button class="hamburger" id="hamburger">🍟</button>
+
+<nav id="navMenu" class="menu">
+  <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/galeria">Galería</a></li>
+    <li><a href="/upload">Subir Recuerdo</a></li>
+  </ul>
+</nav>
+
+<body>
+  <h2 class="bienvenida">Bienvenida a Nuestro Lugar de Recuerdos❤️</h2>
+  <p class="parrafo">💞 Este es un espacio para celebrar nuestro amor 💖 y recordar todos los hermosos momentos que hemos compartido 💕📸</p>
+
+  <h2>📸 Galería de Recuerdos con mi Princesa 🏰👑✨<h2>
+
+  <!-- Carrusel de fotos -->
+  <div class="carousel">
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <% if (photos.length > 0) { %>
+        <% photos.forEach(photo => { %>
+          <div class="carousel-item">
+            <img src="<%= photo.imageUrl %>" alt="Recuerdo">
+            <p class="description"><%= photo.description %>✨💬</i></p>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No hay recuerdos aún. ¡Sube el primero!</p>
+      <% } %>
+    </div>
+  </div>
+  <p>📷😍 Pasa las fotos, mi amor 🌹</p>
+
+  <div class="button-contenedor">
+    <% if (photos.length > 0) { %>
+      <button id="prevBtn" class="button"><i class="fa-solid fa-left-long"></i></button>
+      <button id="nextBtn" class="button"><i class="fa-solid fa-right-long"></i></button>
+      <% } %>
+      <p><a href="/upload" class="button"></i>¿Quieres subir un nuevo recuerdo amor?<i class="fas fa-upload"></i></a></p>
+      
+  </div>
+
+<script src="javascripts/index.js"></script>
+
+ 
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+  background-image: url('https://i.ytimg.com/vi/dJumG4MZphs/maxresdefault.jpg'); /* Ruta de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene la imagen fija mientras haces scroll */
+  height: 100vh; /* Asegura que cubra toda la pantalla */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+ color:#e6e3e3;
+ text-align: center;
+ font-size: 16px;
+}
+
+.bienvenida{
+  padding-top: 10px;
+}
+
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  min-width: 100%; /* Hace que solo se muestre una imagen a la vez */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel img {
+  width: 80%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color:#e6e3e3;
+}
+
+.button {
+  background-color: #ff4c4c;;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #e43939;
+}
+
+
+.parrafo{
+ color: white;
+ text-align: center;
+}
+
+.button-contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.fa-upload{
+  padding: 5px;
+  color: black;
+}
+
+
+.menu {
+  display: none; /* Ocultar por defecto */
+  position: fixed; /* Para que flote sobre el contenido */
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  z-index: 1000; /* Asegurar que esté por encima */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  padding: 5px;
+  margin: 0;
+}
+
+.menu ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px;
+  margin-left: 15px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  position: fixed;
+  z-index: 1100; /* Asegurar que esté sobre el menú */
+  cursor: pointer;
+}
+
+/* Mostrar menú cuando esté activo */
+.menu.active {
+  display: block;
+}
+
