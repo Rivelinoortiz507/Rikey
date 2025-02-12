@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon app.js"
+    
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
