@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db'); // Conexión a MySQL
+const db = require('../config/db'); // Asumiendo que tu archivo de conexión es db.js
 
-// Página principal - Mostrar lista de fotos
 router.get('/', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT * FROM photos ORDER BY created_at DESC');
-    res.render('index', { title: 'Lugar de Recuerdos', photos: rows });
+    console.log("Consultando la base de datos...");
+    const [photos] = await db.query('SELECT * FROM photos ORDER BY created_at DESC'); // Utiliza `query` en lugar de `db.query()`
+    res.render('index', { photos });  // Renderiza la vista con las fotos
   } catch (error) {
     console.error('Error al obtener las fotos:', error);
-    res.status(500).send('Error al obtener las fotos.');
+    res.status(500).send('Error al obtener las fotos');
   }
 });
 
